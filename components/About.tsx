@@ -1,0 +1,31 @@
+'use client';
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import SectionHeading from './SectionHeading';
+
+export default function About() {
+  return (
+    <motion.section
+      className='mb-28 max-w-[45rem] text-center leading-8 sm:mb-40'
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.17 }}
+    >
+      <SectionHeading>About Me</SectionHeading>
+      <p className='mb-3'>
+        Crafting exceptional user experiences with a comprehensive{' '}
+        <span className='font-medium'> full-stack</span> skillset. Leveraging
+        the power of{' '}
+        <span className='font-medium'>Node.js, React, and AWS</span> to
+        architect, build, and deploy scalable and performant web applications. A
+        <span className='italic'>
+          continuous learner, adept in utilizing cutting-edge tools like{' '}
+          <span className='underline'>Docker, Kubernetes, and Kafka</span> for
+          robust deployments
+        </span>
+        . Thrives in collaborative environments as a strong team player.
+      </p>
+    </motion.section>
+  );
+}

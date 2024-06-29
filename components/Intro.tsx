@@ -44,7 +44,7 @@ export default function Intro() {
           </motion.span>
         </div>
       </div>
-      <motion.p
+      <motion.h1
         className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export default function Intro() {
         <span className='font-bold'>7 years</span> of experience. I enjoy
         building <span className='italic'>sites & apps</span>. My focus is{' '}
         <span className='underline'>React & Node.js</span>.
-      </motion.p>
+      </motion.h1>
 
       <motion.div
         className='flex flex-col sm:flex-row items-center justify-center gap-2 rounded-full text-lg font-medium'
@@ -71,8 +71,8 @@ export default function Intro() {
         </Link>
 
         <a
-          href=''
-          // download
+          href='/resume.pdf'
+          download
           className='group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10'
         >
           Download CV
@@ -80,17 +80,17 @@ export default function Intro() {
         </a>
 
         <a
-          href='https://github.com/ratishudawat'
+          href='https://www.linkedin.com/in/ratishudawat/'
           target='_blank'
-          className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer  border border-black/10'
+          className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10'
         >
           <BsLinkedin />
         </a>
 
         <a
-          href='https://www.linkedin.com/in/ratishudawat/'
+          href='https://github.com/ratishudawat'
           target='_blank'
-          className='bg-white p-4 text-gray-700 text-[1.35rem] flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer  border border-black/10'
+          className='bg-white p-4 text-gray-700 text-[1.35rem] flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10'
         >
           <FaGithubSquare />
         </a>
