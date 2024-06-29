@@ -1,22 +1,25 @@
+'use client';
+
 import Intro from '@/components/Intro';
-import Image from 'next/image';
 import SectionDivider from '@/components/SectionDivider';
 import About from '@/components/About';
+import Projects from '@/components/ProjectList';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
     <main className='flex flex-col items-center px-4'>
-      <div>
-        <Image
-          src={'/wuc.png'}
-          alt={'Website under construction'}
-          width={200}
-          height={200}
-        />
-      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className='mt-8'
+      ></motion.div>
       <Intro />
       <SectionDivider />
       <About />
+      <SectionDivider />
+      <Projects />
     </main>
   );
 }
