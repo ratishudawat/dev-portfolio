@@ -1,40 +1,28 @@
 'use client';
 
-import { links } from '@/lib/data';
+import { ActiveSectionContextType, SectionName } from '@/lib/types';
 import React, { useState, createContext, useContext } from 'react';
 
-type SectionName = (typeof links)[number]['name'];
+export const ActiveSectionContext = createContext<ActiveSectionContextType | null>(null);
 
-type ActiveSectionContextProviderProps = Readonly<{
-  children: React.ReactNode;
-}>;
-
-type ActiveSectionContextType = {
-  activeSection: SectionName;
-  setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
-};
-
-export const ActiveSectionContext =
-  createContext<ActiveSectionContextType | null>(null);
-
-export default function ActiveSectionContextProvider({
-  children,
-}: ActiveSectionContextProviderProps) {
+const ActiveSectionContextProvider = ({ children }: { children: React.ReactNode }) => {
   const [activeSection, setActiveSection] = useState<SectionName>('Home');
+  const [timeOfLastClick, setTimeOfLastClick] = useState(0);
 
   return (
-    <ActiveSectionContext.Provider value={{ activeSection, setActiveSection }}>
+    <ActiveSectionContext.Provider value={{ activeSection, setActiveSection, timeOfLastClick, setTimeOfLastClick }}>
       {children}
     </ActiveSectionContext.Provider>
   );
-}
+};
 
-export function useActiveSection() {
+export const useActiveSection = () => {
   const context = useContext(ActiveSectionContext);
-  if (context === null) {
-    throw new Error(
-      'useActiveSectionContext must be used within an ActiveSectionContextProvider'
-    );
+  if (!context) {
+    throw new Error('useActiveSection must be used within an ActiveSectionContextProvider');
   }
+
   return context;
-}
+};
+
+export default ActiveSectionContextProvider;
