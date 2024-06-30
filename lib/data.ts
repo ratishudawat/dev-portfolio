@@ -48,7 +48,29 @@ export const projectsData = [
     title: 'Project',
     description:
       'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et.,',
-    tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
+    tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer Motion'],
     imageUrl: project3,
   },
+] as const;
+
+export const skillsData = [
+  'Node.js',
+  'Express',
+  'React',
+  'Python',
+  'Next.js',
+  'JavaScript',
+  'TypeScript',
+  'Git',
+  'Tailwind',
+  'PostgreSQL',
+  'MySQL',
+  'Redux',
+  'AWS',
+  'EC2',
+  'Docker',
+  'Kafka',
+  'Elasticsearch',
+  'Java',
+  'Framer Motion',
 ] as const;
