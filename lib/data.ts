@@ -119,7 +119,7 @@ export const experiencesData = [
     title: 'Senior Software Engineer',
     company: 'Unify Technologies',
     description:
-      'Currently, I design high-performance UIs and integrate a DLT parser and real-time hardware logging using React, Node, Typescript, Qt, Electron, Eclipse Theia, and Tailwind.',
+      'Currently, I design high-performance UIs and integrate a DLT parser into real-time hardware logging system using React, Node, Typescript, Qt, Electron, Eclipse Theia, and Tailwind.',
     icon: React.createElement(FaReact),
     date: '2022 - Present',
   },
