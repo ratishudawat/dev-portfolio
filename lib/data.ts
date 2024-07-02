@@ -26,10 +26,10 @@ export const links = [
     name: 'Experience',
     hash: '#experience',
   },
-  {
-    name: 'Projects',
-    hash: '#projects',
-  },
+  // {
+  //   name: 'Projects',
+  //   hash: '#projects',
+  // },
   {
     name: 'Contact',
     hash: '#contact',
