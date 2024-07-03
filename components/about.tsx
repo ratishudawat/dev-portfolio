@@ -19,14 +19,10 @@ export default function About() {
     >
       <SectionHeading>About Me</SectionHeading>
       <p className='mb-3'>
-        Crafting exceptional user experiences with a comprehensive <span className='font-medium'> full-stack</span>{' '}
-        skillset. Leveraging the power of <span className='font-medium'>Node.js, React, and AWS</span> to architect,
-        build, and deploy scalable and performant web applications. A
-        <span className='italic'>
-          continuous learner, adept in utilizing cutting-edge tools like{' '}
-          <span className='underline'>Docker, Kubernetes, and Kafka</span> for robust deployments
-        </span>
-        . Thrives in collaborative environments as a strong team player.
+        Building awesome user experiences with a solid <span className='font-medium'>full-stack skillset</span>. I use{' '}
+        <span className='font-medium'> Node.js, React, and AWS</span> to create and launch scalable, high-performance
+        web apps. I'm always learning and love working with the latest tools like Docker, Kubernetes, and Kafka for
+        smooth deployments. I thrive in team settings and enjoy being a strong collaborator.
       </p>
     </motion.section>
   );
