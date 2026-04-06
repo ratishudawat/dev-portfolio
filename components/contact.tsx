@@ -25,8 +25,8 @@ export default function Contact() {
       <p className='text-gray-700 -mt-6 dark:text-white/80'>Let's connect!</p>
       <p className='text-gray-700 dark:text-white/80'>
         Drop me a line at{' '}
-        <a className={'underline'} href='mailto:work@ratishu.com'>
-          work@ratishu.com
+        <a className={'underline'} href='mailto:ratishudawat@gmail.com'>
+          ratishudawat@gmail.com
         </a>{' '}
         or use the form below to reach out.
       </p>

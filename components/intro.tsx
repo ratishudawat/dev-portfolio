@@ -8,7 +8,6 @@ import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { FaSquareInstagram } from 'react-icons/fa6';
 import { FaSquareXTwitter } from 'react-icons/fa6';
-import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionInView } from '@/lib/hooks';
 import { useActiveSection } from '@/context/active-section-context';
@@ -52,14 +51,13 @@ export default function Intro() {
         </div>
       </div>
       <motion.h1
-        className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'
+        className='mb-10 mt-4 px-4 text-xl font-medium !leading-[1.5] sm:text-[2rem]'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className='font-bold'>Hello, I'm Ratish.</span> I'm a{' '}
-        <span className='font-bold'>full-stack developer</span> with <span className='font-bold'>7 years</span> of
-        experience. I enjoy building <span className='italic'>sites & apps</span>. My focus is{' '}
-        <span className='underline'>React & Node.js</span>.
+        <span className='font-bold'>Hi, I'm Ratish</span> - a <span className='font-bold'>full-stack developer</span>{' '}
+        with <span className='font-bold'>8+ years</span> of experience crafting <span className='italic'>web apps</span>{' '}
+        with <span className='underline'>React, Node.js & Java</span>.
       </motion.h1>
 
       <motion.div
@@ -78,15 +76,6 @@ export default function Intro() {
         >
           Contact me here <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition' />
         </Link>
-
-        <a
-          href='/Resume_Ratish_Udawat.pdf'
-          download
-          className='group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10'
-        >
-          Download CV
-          <HiDownload className='opacity-60 group-hover:translate-y-1 transition cursor-pointer' />
-        </a>
 
         <a
           href='https://www.linkedin.com/in/ratishudawat/'

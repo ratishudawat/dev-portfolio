@@ -4,6 +4,7 @@ import { FaReact } from 'react-icons/fa';
 import { LuGraduationCap } from 'react-icons/lu';
 import { FaNodeJs } from 'react-icons/fa';
 import { SiSailsdotjs } from 'react-icons/si';
+import { FaCode } from 'react-icons/fa';
 
 import project1 from '@/public/project1.png';
 import project2 from '@/public/project2.png';
@@ -61,31 +62,28 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  'Node.js',
-  'Express',
-  'React',
-  'Python',
-  'Next.js',
   'JavaScript',
   'TypeScript',
-  'Git',
-  'Tailwind',
-  'PostgreSQL',
+  'Java',
+  'React',
+  'Node.js',
+  'Express',
+  'Tailwind CSS',
+  'Electron',
   'MySQL',
-  'Redux',
+  'Redis',
+  'Elasticsearch',
   'AWS',
-  'EC2',
   'Docker',
   'Kafka',
-  'Elasticsearch',
-  'Java',
-  'Framer Motion',
+  'Jest',
+  'Git',
 ] as const;
 
 export const experiencesData = [
   {
     title: 'B.Tech, Computer Science',
-    company: 'Rajasthan Technical University',
+    company: 'Jaipur Engineering College and Research Center',
     description:
       "In my bachelor's journey, I delved into Object Oriented Programming, mastered Databases, navigated Data Structures and Algorithms, explored Operating Systems, and connected through Computer Networks.",
     icon: React.createElement(LuGraduationCap),
@@ -95,32 +93,40 @@ export const experiencesData = [
     title: 'Full-Stack Developer',
     company: 'Vaahika',
     description:
-      'I began my career building an admin dashboard and client-facing website using Sails.js, Handlebars, React, Express, Material UI, and MySQL. I also developed robust RESTful APIs for an Android app.',
+      'I kicked off my career by building an admin dashboard and client-facing site with Node.js, Handlebars, MySQL, and AWS. I also got my hands dirty designing APIs for the Android app — a great first taste of full-stack ownership.',
     icon: React.createElement(SiSailsdotjs),
-    date: '2017 - 2018',
+    date: 'Mar 2017 - Apr 2018',
   },
   {
     title: 'Software Engineer',
     company: 'HolidayIQ',
     description:
-      'Later, I created a dynamic chat form framework and a custom tracking engine using Node.js, React, Laravel, MySQL, Docker, Kafka, and Elasticsearch.',
+      'Here I built a lead tracking engine from the ground up with Express, Docker, Kafka, and Elasticsearch. I also created a dynamic chat form with React and Node.js that gave a real boost to daily leads.',
     icon: React.createElement(FaReact),
-    date: '2018 - 2020',
+    date: 'Aug 2018 - Aug 2020',
   },
   {
-    title: 'Engineer - Product and Platform',
+    title: 'Software Engineer',
     company: 'Altimetrik',
     description:
-      'I then migrated a legacy application to a modern stack with React and Node, Java, Docker, and Kubernetes.',
+      'I worked on migrating PayPal\'s Activities component to a modern React and Node stack running on Kubernetes. I also helped drive the GoPay-PayPal integration for China data centers using Java.',
     icon: React.createElement(FaNodeJs),
-    date: '2020 - 2021',
+    date: 'Oct 2020 - Sep 2021',
   },
   {
     title: 'Senior Software Engineer',
     company: 'Unify Technologies',
     description:
-      'Currently, I design high-performance UIs and integrate a DLT parser into real-time hardware logging system using React, Node, Typescript, Qt, Electron, Eclipse Theia, and Tailwind.',
+      'I designed high-performance UIs with React, TypeScript, and Node.js — handling 2,000 to 10,000 automotive log traces per second. This role earned me the "Star Performer for Q1-2023" recognition.',
     icon: React.createElement(FaReact),
-    date: '2022 - Present',
+    date: 'Jul 2022 - Aug 2024',
+  },
+  {
+    title: 'Lead Software Engineer',
+    company: 'Root Node India',
+    description:
+      'Currently leading frontend development for Bagstage, a baggage operations platform for Copenhagen Airport, and contributing to backend services with Java Spring Boot. I also work on PhonixFlow, where I leverage AI-assisted tools to ship features faster.',
+    icon: React.createElement(FaCode),
+    date: 'Feb 2025 - Present',
   },
 ] as const;
