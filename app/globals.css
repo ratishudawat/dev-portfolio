@@ -2,14 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  --line-color: #e5e7eb;
-}
-
-.borderBlack {
-  @apply border border-black/10;
+:root {
+  --accent: #047857;
+  --grid-line: rgba(15, 23, 42, 0.055);
+  --grid-line-strong: rgba(15, 23, 42, 0.085);
 }
 
 html.dark {
-  --line-color: rgba(255, 255, 255, 0.2);
+  --accent: #34d399;
+  --grid-line: rgba(255, 255, 255, 0.04);
+  --grid-line-strong: rgba(255, 255, 255, 0.07);
+}
+
+body {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to right, var(--grid-line-strong) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-strong) 1px, transparent 1px);
+  background-size: 12px 12px, 12px 12px, 60px 60px, 60px 60px;
+  background-position: center top;
+  background-attachment: fixed;
 }

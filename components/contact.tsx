@@ -3,64 +3,52 @@
 import React from 'react';
 import SectionHeading from './section-heading';
 import { useSectionInView } from '@/lib/hooks';
-import { motion } from 'framer-motion';
 import { sendEmail } from '@/actions/sendEmail';
 import SubmitBtn from './submit-btn';
 import toast from 'react-hot-toast';
+
+const fieldClass =
+  'w-full rounded-md border border-neutral-300 bg-transparent px-3 py-2.5 text-neutral-900 placeholder:text-neutral-400 focus:border-neutral-500 focus:outline-none dark:border-neutral-700 dark:text-neutral-100 dark:placeholder:text-neutral-600 dark:focus:border-neutral-500';
 
 export default function Contact() {
   const { ref } = useSectionInView('Contact');
 
   return (
-    <motion.section
+    <section
       ref={ref}
       id='contact'
-      className='mb-20 sm:mb-28 w-[min(100%,38rem)] text-center'
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      className='w-full scroll-mt-28 border-t border-neutral-200 py-12 dark:border-neutral-800'
     >
-      <SectionHeading>Contact Me</SectionHeading>
+      <SectionHeading>Contact</SectionHeading>
 
-      <p className='text-gray-700 -mt-6 dark:text-white/80'>Let's connect!</p>
-      <p className='text-gray-700 dark:text-white/80'>
-        Drop me a line at{' '}
-        <a className={'underline'} href='mailto:ratishudawat@gmail.com'>
-          ratishudawat@gmail.com
-        </a>{' '}
-        or use the form below to reach out.
-      </p>
+      <div className='max-w-xl'>
+        <p className='leading-relaxed text-neutral-700 dark:text-neutral-300'>
+          Reach me at{' '}
+          <a
+            className='text-accent underline underline-offset-4'
+            href='mailto:ratishudawat@gmail.com'
+          >
+            ratishudawat@gmail.com
+          </a>
+          , or send a note here.
+        </p>
 
-      <form
-        className='mt-10 flex flex-col dark:text-black'
-        action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
-          if (error) {
-            toast.error(error);
-            return;
-          } else {
-            toast.success('Email sent successfully!');
-          }
-        }}
-      >
-        <input
-          className='h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:opacity-100 transition-all dark:outline-none'
-          name='senderEmail'
-          type='email'
-          placeholder='Your email'
-          required
-          maxLength={500}
-        />
-        <textarea
-          className='h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:opacity-100 transition-all dark:outline-none'
-          name='message'
-          id=''
-          placeholder='Your message'
-          required
-          maxLength={5000}
-        />
-        <SubmitBtn />
-      </form>
-    </motion.section>
+        <form
+          className='mt-8 flex flex-col gap-3'
+          action={async (formData) => {
+            const { error } = await sendEmail(formData);
+            if (error) {
+              toast.error(error);
+              return;
+            }
+            toast.success('Message sent.');
+          }}
+        >
+          <input className={fieldClass} name='senderEmail' type='email' placeholder='Your email' required maxLength={500} />
+          <textarea className={`${fieldClass} h-40 resize-none`} name='message' placeholder='Your message' required maxLength={5000} />
+          <SubmitBtn />
+        </form>
+      </div>
+    </section>
   );
 }

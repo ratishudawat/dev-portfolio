@@ -2,39 +2,23 @@
 
 import React from 'react';
 import SectionHeading from './section-heading';
-import { skillsData } from '@/lib/data';
+import { skillGroups } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
-import { animate, delay, motion } from 'framer-motion';
-
-const fadeInAnimationVariants = {
-  initial: { opacity: 0, y: 100 },
-  animate: (index: number) => ({ opacity: 1, y: 0, transition: { delay: 0.05 * index } }),
-};
 
 export default function Skills() {
   const { ref } = useSectionInView('Skills');
 
   return (
-    <section ref={ref} id='skills' className='mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40'>
+    <section ref={ref} id='skills' className='w-full scroll-mt-28 border-t border-neutral-200 py-12 dark:border-neutral-800'>
       <SectionHeading>Skills</SectionHeading>
-      <ul className='flex flex-wrap justify-center gap-2 text-lg text-gray-700'>
-        {skillsData.map((skill, index) => {
-          return (
-            <motion.li
-              className='bg-white border borderBlack rounded-xl px-5 py-3
-               dark:bg-white/10 dark:text-white/80'
-              key={index}
-              variants={fadeInAnimationVariants}
-              initial='initial'
-              whileInView={'animate'}
-              viewport={{ once: true }}
-              custom={index}
-            >
-              {skill}
-            </motion.li>
-          );
-        })}
-      </ul>
+      <dl className='max-w-2xl space-y-3'>
+        {skillGroups.map((group) => (
+          <div key={group.label} className='flex flex-col gap-1 sm:flex-row sm:gap-6'>
+            <dt className='w-36 shrink-0 text-sm text-neutral-400 dark:text-neutral-500'>{group.label}</dt>
+            <dd className='text-neutral-700 dark:text-neutral-300'>{group.items}</dd>
+          </div>
+        ))}
+      </dl>
     </section>
   );
 }

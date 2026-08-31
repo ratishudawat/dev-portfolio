@@ -6,7 +6,7 @@ import React, { useState, createContext, useContext } from 'react';
 export const ActiveSectionContext = createContext<ActiveSectionContextType | null>(null);
 
 const ActiveSectionContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const [activeSection, setActiveSection] = useState<SectionName>('Home');
+  const [activeSection, setActiveSection] = useState<SectionName>('About');
   const [timeOfLastClick, setTimeOfLastClick] = useState(0);
 
   return (
