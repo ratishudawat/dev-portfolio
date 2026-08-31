@@ -6,7 +6,6 @@ import img from '@/public/profile-picture.png';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
-import { FaSquareInstagram } from 'react-icons/fa6';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 import { FaGithubSquare } from 'react-icons/fa';
 import { useSectionInView } from '@/lib/hooks';
@@ -91,14 +90,6 @@ export default function Intro() {
           className='bg-white p-4 text-gray-700 text-[1.35rem] flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60'
         >
           <FaGithubSquare />
-        </a>
-
-        <a
-          href='https://www.instagram.com/ratxish/'
-          target='_blank'
-          className='bg-white p-4 text-gray-700 text-[1.35rem] flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60'
-        >
-          <FaSquareInstagram />
         </a>
 
         <a
